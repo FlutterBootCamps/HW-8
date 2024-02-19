@@ -38,7 +38,12 @@ class ListSection extends StatelessWidget {
                       email: GetIt.I.get<MainData>().contacts[index].email);
                 }),
               );
-            } else if (state is ClearState) {
+            } else if (state is ClearState && !GetIt.I.get<MainData>().isSnackbarShown) {
+              WidgetsBinding.instance.addPostFrameCallback((_) {
+              context.showSnackBar(
+                  "List cleared!", context);
+                  GetIt.I.get<MainData>().isSnackbarShown = true;
+            });
               GetIt.I.get<MainData>().clearContactList();
               return const NoContactsMessage();
             } else if (state is ListInitial) {

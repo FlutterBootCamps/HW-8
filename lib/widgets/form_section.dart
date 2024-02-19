@@ -5,6 +5,7 @@ import 'package:my_contact_list/assets/colors.dart';
 import 'package:my_contact_list/bloc/list_bloc.dart';
 import 'package:my_contact_list/data%20layer/main_data_layer.dart';
 import 'package:my_contact_list/helpers/extensions/screen_helper.dart';
+import 'package:my_contact_list/helpers/extensions/snackbar_helper.dart';
 import 'package:my_contact_list/widgets/button_cute.dart';
 import 'package:my_contact_list/widgets/icon_button_cute.dart';
 import 'package:my_contact_list/widgets/text_field_cute.dart';
@@ -79,7 +80,8 @@ class FormSection extends StatelessWidget {
                 ButtonCute(
                     text: "Clear List",
                     onClick: () {
-                      context.read<ListBloc>().add(ClearEvent());
+                      GetIt.I.get<MainData>().isSnackbarShown = false;
+                      context.read<ListBloc>().add(ClearEvent(list: GetIt.I.get<MainData>().contacts));
                     }),
               ],
             )

@@ -7,23 +7,28 @@ part 'list_event.dart';
 part 'list_state.dart';
 
 class ListBloc extends Bloc<ListEvent, ListState> {
-  ListBloc()
-      : super(ListInitial()) {
+  ListBloc() : super(ListInitial()) {
     on<ListEvent>((event, emit) {});
 
     on<AddEvent>((event, emit) {
       if (event.name.trim() == "" || event.email.trim() == "") {
-        emit(ErrorState(message: "Please enter valid input, empty fields not allowed!"));
+        emit(ErrorState(
+            message: "Please enter valid input, empty fields not allowed!"));
       } else if (!EmailValidator.validate(event.email)) {
         emit(ErrorState(message: "Email not valid, please change email."));
-        
-      }else{
-      emit(AddState(contact: Contact(name: event.name, email: event.email)));
+      } else {
+        emit(AddState(contact: Contact(name: event.name, email: event.email)));
       }
     });
 
     on<ClearEvent>((event, emit) {
-      emit(ClearState());
+      if (event.list.isEmpty) {
+        emit(ErrorState(message: "List is already clear!"));
+      } else {
+        emit(ClearState());
+      }
+      
     });
   }
 }
+
