@@ -15,6 +15,7 @@ Your task is to redesign this project (as showing in picture) to contain BLoC
 You must utilize the following:  
 - Custom widgets 
 - Extension
+- constatns liske (spaces and colors)
 - BLoC
 
 
