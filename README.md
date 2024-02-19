@@ -1,34 +1,18 @@
-# HW-8
-
-## Description:
-Your task is to redesign this project (as showing in picture) to contain BLoC
-
-<img src="https://github.com/FlutterBootCamps/HW-6/assets/94991478/8a1bc6dd-c1c2-4e1e-89fc-945ef9d94ecb" width=300/>  
+home page in waiting to insert data
 
 
--	This is just a sketch; you need to make the design perfect   
--	When user click "clear" it will erase the field   
--	After adding a new item or clearing the list, the screen will update automatically  
--	You should separate upper and lower components in the screen      
-
-## Requirements:
-You must utilize the following:  
-- Custom widgets 
-- Extension
-- constatns liske (spaces and colors)
-- BLoC
+<img src="https://github.com/ohob745/HW-8/assets/110139139/b08612c1-57fa-4cb1-b148-6c3b7519975d" alt="home page in waiting to insert data" width="200" height="300">
 
 
-## Submission:
-1. Flutter Project:
-    - Submit the complete Flutter project folder, including all necessary files (screens and components).
-2. GitHub Submission:
-   - Create a Fork from the project’s GitHub repository.
-   - Create a new branch with your name.
-   - Commit frequently with descriptive messages to show your progress.
-   - Finally, create a Pull Request to the project’s original repository.
-3. Screenshots of your app.
+the data insert successfully
 
-## Deadline: 
-20/2/2024  9:59 AM
- 
+
+<img src="https://github.com/ohob745/HW-8/assets/110139139/00e8e201-ed71-46be-84f3-8f15c17e2c7d" alt="the data insert successfully" width="200" height="300">
+
+
+
+the list clear successfully
+
+
+<img src="https://github.com/ohob745/HW-8/assets/110139139/e1d87eb8-64ef-4420-a7cb-e1e9f58b791d" alt="the list clear successfully" width="200" height="300">
+
