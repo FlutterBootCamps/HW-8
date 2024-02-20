@@ -1,34 +1,10 @@
 # HW-8
 
-## Description:
-Your task is to redesign this project (as showing in picture) to contain BLoC
-
-<img src="https://github.com/FlutterBootCamps/HW-6/assets/94991478/8a1bc6dd-c1c2-4e1e-89fc-945ef9d94ecb" width=300/>  
+This application is for adding users and the ability to delete their by using BLoC
 
 
--	This is just a sketch; you need to make the design perfect   
--	When user click "clear" it will erase the field   
--	After adding a new item or clearing the list, the screen will update automatically  
--	You should separate upper and lower components in the screen      
-
-## Requirements:
-You must utilize the following:  
-- Custom widgets 
-- Extension
-- constatns liske (spaces and colors)
-- BLoC
+<img width="149" alt="HW 8 -" src="https://github.com/AlaaMYahya/HW-8/assets/129466098/73387e39-ab0e-4e64-8419-33e9d6d0cafc">
 
 
-## Submission:
-1. Flutter Project:
-    - Submit the complete Flutter project folder, including all necessary files (screens and components).
-2. GitHub Submission:
-   - Create a Fork from the project’s GitHub repository.
-   - Create a new branch with your name.
-   - Commit frequently with descriptive messages to show your progress.
-   - Finally, create a Pull Request to the project’s original repository.
-3. Screenshots of your app.
 
-## Deadline: 
-20/2/2024  9:59 AM
- 
+<img width="147" alt="HW 8 - Home Screen" src="https://github.com/AlaaMYahya/HW-8/assets/129466098/9e486a35-c859-4a8a-88cd-aa03706e72c7">
