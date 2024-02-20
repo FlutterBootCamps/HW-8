@@ -1,7 +1,7 @@
-# HW-8
+# HW-6
 
 ## Description:
-Your task is to redesign this project (as showing in picture) to contain BLoC
+Your task is to create one page as showing in picture  
 
 <img src="https://github.com/FlutterBootCamps/HW-6/assets/94991478/8a1bc6dd-c1c2-4e1e-89fc-945ef9d94ecb" width=300/>  
 
@@ -15,8 +15,8 @@ Your task is to redesign this project (as showing in picture) to contain BLoC
 You must utilize the following:  
 - Custom widgets 
 - Extension
-- constatns liske (spaces and colors)
-- BLoC
+- Shared preferences or get_storage
+- get_it
 
 
 ## Submission:
@@ -30,5 +30,5 @@ You must utilize the following:
 3. Screenshots of your app.
 
 ## Deadline: 
-20/2/2024  9:59 AM
+15/2/2024  9:59 AM
  
