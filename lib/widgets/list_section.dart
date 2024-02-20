@@ -13,22 +13,27 @@ class ListSection extends StatelessWidget {
   const ListSection({
     super.key,
   });
-  
-  
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
         height: context.getHeight() * .4,
-        child: BlocBuilder<ListBloc, ListState>(
-          builder: (context, state) {
-            if (state is AddState && !GetIt.I.get<MainData>().isSnackbarShown) {
-              WidgetsBinding.instance.addPostFrameCallback((_) {
+        child: BlocConsumer<ListBloc, ListState>(
+          listener: (context, state) {
+            if (state is AddState) {
               context.showSnackBar(
                   "${state.contact.name} has been added!", context);
-                  GetIt.I.get<MainData>().isSnackbarShown = true;
-            });
+            }
+            if (state is ClearState) {
+              context.showSnackBar("List Cleared", context);
+            }
 
+            if (state is ErrorState) {
+              context.showSnackBar(state.message, context);
+            }
+          },
+          builder: (context, state) {
+            if (state is AddState) {
               GetIt.I.get<MainData>().addContact(state.contact);
               return ListView(
                 children: List.generate(GetIt.I.get<MainData>().contacts.length,
@@ -38,12 +43,7 @@ class ListSection extends StatelessWidget {
                       email: GetIt.I.get<MainData>().contacts[index].email);
                 }),
               );
-            } else if (state is ClearState && !GetIt.I.get<MainData>().isSnackbarShown) {
-              WidgetsBinding.instance.addPostFrameCallback((_) {
-              context.showSnackBar(
-                  "List cleared!", context);
-                  GetIt.I.get<MainData>().isSnackbarShown = true;
-            });
+            } else if (state is ClearState) {
               GetIt.I.get<MainData>().clearContactList();
               return const NoContactsMessage();
             } else if (state is ListInitial) {
@@ -58,11 +58,7 @@ class ListSection extends StatelessWidget {
                                 GetIt.I.get<MainData>().contacts[index].email);
                       }),
                     );
-            } else if (state is ErrorState && !GetIt.I.get<MainData>().isSnackbarShown) {
-              WidgetsBinding.instance.addPostFrameCallback((_) {
-                context.showSnackBar(state.message, context);
-                GetIt.I.get<MainData>().isSnackbarShown = true;
-              });
+            } else if (state is ErrorState) {
               return (GetIt.I.get<MainData>().contacts.isEmpty)
                   ? const NoContactsMessage()
                   : ListView(

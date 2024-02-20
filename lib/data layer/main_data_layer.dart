@@ -3,7 +3,6 @@ import 'package:my_contact_list/models/contact_model.dart';
 
 class MainData {
   List<Contact> contacts = [];
-  bool isSnackbarShown = false;
   var locator = GetStorage();
 
   MainData() {

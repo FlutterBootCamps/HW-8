@@ -10,7 +10,7 @@ final class AddEvent extends ListEvent{
 }
 
 final class ClearEvent extends ListEvent{
-  List<Contact> list;
+  final List<Contact> list;
 
   ClearEvent({required this.list});
 }
